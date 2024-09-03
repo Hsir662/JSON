@@ -5,29 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        for(var i=1;i<10;i++){
+        for(var i=1;i<10;i++){//使用for循环输出乘法表
             for(var j=1;j<=i;j++){
                 document.write(j+"*"+i+"="+i*j+"&nbsp"+"\n"); 
             
             }
-            document.write("<hr>");
+            document.write("<hr>");//document.write是输出在网页上
         }
-        document.write("<br>");
-        var arr=["上海","深圳","武汉"];
+        document.write("<br>");//使用js在网页上换行
+        var arr=["上海","深圳","武汉"];//创建数组
         for(var list=0;list<arr.length;list++){
-            document.write("<li>"+arr[list]+"</li>");
+            document.write("<li>"+arr[list]+"</li>");//使用for循环来输出数组
         }
-        var sum=function(a,b){
-            console.log(arguments)
+        var sum=function(a,b){//创建带参数方法
+            console.log(arguments)//使用arguments封装实参对象
             return a+b;
         }
-        var  add=function(getsum){
+        var  add=function(getsum){//
             return getsum(10,20);
         }
-        // var result=add(sum);
-        // console.log(result); 
-        // var person=new Object;
-        // person.name="张三";
+        var result=add(sum);
+        console.log(result); 
+        // var person=new Object;//js创建对象储存
+        // person.name="张三";//js创建对象可以直接创建
         // person.age=22;
         // person.sex='男';
         // document.write("<br>");
@@ -37,9 +37,10 @@
         // var apple=person.eat("苹果");
         // console.log(person.eat);
         var json='{"name":"张三","dog":{"dogname":"小黑","dogage":2,"dogSex":"公"},"loveSingers":["周杰伦","林俊杰","薛之谦","邓紫棋","周传雄"]}'
-        var personJosn=JSON.parse(json);
-        var dog=personJosn.dog;
-        console.log(personJosn );
+        //         创建字符串       创建dog对象                                      创建数组 
+        var personJosn=JSON.parse(json);//调用JSON.parse方法创建JSON对象
+        var dog=personJosn.dog;//使用对象调用值
+        console.log(personJosn );//控制台输出
         console.log(personJosn.loveSingers[2]);
     </script>
 </head>
