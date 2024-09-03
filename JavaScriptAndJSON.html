@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        for(var i=1;i<10;i++){
+            for(var j=1;j<=i;j++){
+                document.write(j+"*"+i+"="+i*j+"&nbsp"+"\n"); 
+            
+            }
+            document.write("<hr>");
+        }
+        document.write("<br>");
+        var arr=["上海","深圳","武汉"];
+        for(var list=0;list<arr.length;list++){
+            document.write("<li>"+arr[list]+"</li>");
+        }
+        var sum=function(a,b){
+            console.log(arguments)
+            return a+b;
+        }
+        var  add=function(getsum){
+            return getsum(10,20);
+        }
+        // var result=add(sum);
+        // console.log(result); 
+        // var person=new Object;
+        // person.name="张三";
+        // person.age=22;
+        // person.sex='男';
+        // document.write("<br>");
+        // person.eat=function(food){
+        //     document.write("姓名"+person.name+"正在吃"+food+",他今年是"+person.age+"岁，性别是"+person.sex)
+        // }
+        // var apple=person.eat("苹果");
+        // console.log(person.eat);
+        var json='{"name":"张三","dog":{"dogname":"小黑","dogage":2,"dogSex":"公"},"loveSingers":["周杰伦","林俊杰","薛之谦","邓紫棋","周传雄"]}'
+        var personJosn=JSON.parse(json);
+        var dog=personJosn.dog;
+        console.log(personJosn );
+        console.log(personJosn.loveSingers[2]);
+    </script>
+</head>
+<body>
+
+    
+</body>
+</html>
